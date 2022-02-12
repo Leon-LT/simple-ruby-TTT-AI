@@ -89,7 +89,8 @@ class TicTacToe
   class IllegalMoveError < RuntimeError
   end
 
-  attr_reader :board, :players, :turn
+  attr_reader :players
+  attr_accessor :turn, :board
 
   def initialize(player1, player2)
     @board = Board.new
